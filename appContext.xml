@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+   
+   <context:property-placeholder location="src/main/java/sampleapp.properties"/>
+   
+    <bean id="fruit" class="com.sampleproperties.Fruit"></bean>
+    <bean id="vegitable" class="com.sampleproperties.Vegitable"></bean>
+    
+    <bean id="propertieFruit" class="com.sampleproperties.Fruit">
+       <property name="name" value="${my-fruit}"></property>
+    </bean>
+
+
+</beans>
